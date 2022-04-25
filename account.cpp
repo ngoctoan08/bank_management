@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "account.h"
 #include <iomanip> 
 account::account()
@@ -36,16 +36,11 @@ void account::setMoney(float MONEY) {
 }
 
 void account::ac_withdraw() {
-	/*transaction *ts;
-	ts = new withdraw;*/
-	/*transaction* ts = new withdraw;
-	ts->addtransaction(numac);*/
 	withdraw wd;
 	wd.addtransaction(numac);
-	if (money > wd.getTs_money()) { //ktra so du co du khong?
+	if (money > wd.getTs_money()) { //kiểm tra số dư có đủ tiền để rút không?
 		this->money -= wd.getTs_money();
-		//arr_ts.push_back(*ts);
-		arr_wd.push_back(wd);
+		arr_wd.push_back(wd); //thêm vào danh sách rút tiền
 		cout << "\n\t\tRut tien thanh cong";
 	}
 	else
@@ -58,7 +53,7 @@ void account::ac_deposit() {
 	deposit de;
 	de.addtransaction(numac);
 	this->money += de.getTs_money();
-	arr_de.push_back(de);
+	arr_de.push_back(de); //thêm vào danh sách nạp tiền
 	cout << "\n\t\tNap tien thanh cong";
 }
 
@@ -71,35 +66,24 @@ void titletransaction() {
 	cout << "\n\t\t___________________________________________________________________________________________________________________________\n";
 }
 
-void titlewithdraw() {
-	cout << "\n\t\t___________________________________________________________________________________________________________________________\n";
-	cout << "\n\t\t" << left << setw(20) << "STK";
-	cout << left << setw(30) << "SO TIEN RUT";
-	cout << left << setw(40) << "GHI CHU";
-	cout << "THOI GIAN" << endl;
-	cout << "\n\t\t___________________________________________________________________________________________________________________________\n";
-}
-
-
-void account::ac_history() {
-
+void account::ac_history() { //lịch sử giao dịch
 	titletransaction();
 	for (int i = 0; i < arr_de.size(); i++)
 	{
-		arr_de[i].displaytransaction();
+		arr_de[i].displaytransaction(); //danh sách tt nạp tiền
 	}
 	for (int i = 0; i < arr_wd.size(); i++)
 	{
-		arr_wd[i].displaytransaction();
+		arr_wd[i].displaytransaction(); //ds tt rút tiền
 	}
 }
 
-void account::ac_modify() {
+void account::ac_modify() { //thay đổi thông tin tài khoản
 	string newname;
 	string newcmnd;
 	dayofbirth newdate;
 	string newaddress;
-	while (getchar() != '\n');
+	while (getchar() != '\n'); 
 	cout << "\n\t\tNhap ho ten: ";
 	getline(cin, newname);
 	cout << "\n\t\tNhap CMND: ";
@@ -115,7 +99,7 @@ void account::ac_modify() {
 }
 
 void account::saveaccount(ofstream& fileout) {
-	customer::savefile(fileout);
+	customer::savefile(fileout);//kế thừa từ class customer
 	fileout << numac << ", ";
 	fileout << (size_t)money << "\n";
 }
@@ -125,12 +109,12 @@ void account::savefile(ofstream &fileout) {
 	fileout << arr_de.size() << "\n";
 	for (int i = 0; i < arr_de.size(); i++)
 	{
-		arr_de[i].savefile(fileout);
+		arr_de[i].savefile(fileout); //ghi thông tin danh sách nạp tiền
 	}
 	fileout << arr_wd.size() << "\n";
 	for (int i = 0; i < arr_wd.size(); i++)
 	{
-		arr_wd[i].savefile(fileout);
+		arr_wd[i].savefile(fileout); //ghi tt ds rút tiền
 	}
 }
 
@@ -139,7 +123,7 @@ void account::savefile(ofstream &fileout) {
 void account::readaccount(ifstream& filein) {
 	customer::readfile(filein);
 	getline(filein, numac, ',');
-	filein.seekg(1, 1);
+	filein.seekg(1, 1); 
 	filein >> this->money;
 	string temp;
 	getline(filein, temp);
@@ -172,7 +156,7 @@ void account::readwithdraw(ifstream& filein) { //doc tt rut tien
 }
 
 void account::readfile(ifstream& filein) { //doc tat ca
-	account::readaccount(filein);
-	account::readdeposit(filein);
-	account::readwithdraw(filein);
+	account::readaccount(filein); //đọc thông tin tài khoản
+	account::readdeposit(filein); //đọc tt giao dịch nạp tiền
+	account::readwithdraw(filein); //đọc tt gd rút tiền
 }

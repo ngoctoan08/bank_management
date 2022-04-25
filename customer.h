@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <string>
 #include "dayofbirth.h"
@@ -18,14 +18,14 @@ public:
 	int stt = 0; //so thu tu
 	customer();
 	~customer();
-	void setId(int ID);
-	void setName(string NAME); //dung de thay doi thong tin tai khoan
+	void setId(int ID);  //các phương thức setter để thay đổi thông tin tài khoản
+	void setName(string NAME);
 	void setCmnd(string CMND);
 	void setDate(dayofbirth DATE);
 	void setAddress(string ADDRESS);
-	void input(); //nhap thong tin
-	void output(); //xuat thong tin
+	void input(); //nhập thông tin
+	void output(); //xuất thông tin
 	void savefile(ofstream& fileout); //ghi file
-	void readfile(ifstream&); //phuong thuc doc file
+	void readfile(ifstream&); //đọc file
 };
 

@@ -8,16 +8,6 @@ withdraw::~withdraw()
 {
 }
 
-void withdraw::addtransaction(string num) {
-	this->ts_num = num;
-	cout << "\n\t\tNhap so tien rut: ";
-	cin >> ts_money;
-	cin.ignore();
-	cout << "\n\t\tNhap ghi chu: ";
-	getline(cin, ts_note);
-	datetransaction();
-}
-
 void withdraw::displaytransaction() {
 	cout << "\n\t\t" << left << setw(20) << ts_num<<"-";
 	cout << left << setw(30) << size_t(ts_money);
@@ -25,4 +15,16 @@ void withdraw::displaytransaction() {
 	cout << day << "/" << month << "/" << year;
 	cout << " " << hour << ":" << min << ":" << sec;
 	cout << "\n\t\t___________________________________________________________________________________________________________________________\n";
+}
+
+void withdraw::savefile(ofstream& fileout) {
+	fileout << ts_num << ", ";
+	fileout << "-" << (size_t)ts_money << ", ";
+	fileout << ts_note << ", ";
+	fileout << day << "/";
+	fileout << month << "/";
+	fileout << year << " ";
+	fileout << hour << ":";
+	fileout << min << ":";
+	fileout << sec << "\n";
 }

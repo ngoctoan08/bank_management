@@ -12,11 +12,10 @@ protected:
 	string ts_note;
 	int day, month, year, hour, min, sec;
 public:
-	virtual string getTs_num();
-	virtual float getTs_money();
-	virtual void addtransaction(string num);
+	string getTs_num();
+	float getTs_money();
+	void addtransaction(string num);
 	void datetransaction(); //ham thoi gian
-	void savefile(ofstream &fileout);
 	void readfile(ifstream& filein);
 };
 

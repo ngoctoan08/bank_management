@@ -1,4 +1,4 @@
-#include "customer.h"
+﻿#include "customer.h"
 #include <iomanip>
 customer::customer() {
 }
@@ -27,7 +27,7 @@ void customer::setAddress(string ADDRESS) {
 }
 
 void customer::input() {
-	srand(time(NULL)); //cai dat id ngau nhien
+	srand(time(NULL)); //cài đặt ID ngẫu nhiên
 	id = rand();
 	while (getchar() != '\n');
 	cout << "\n\t\tNhap ho ten: ";
@@ -61,7 +61,7 @@ void customer::savefile(ofstream& fileout) {
 
 void customer::readfile(ifstream& filein) {
 	filein >> this->id;
-	filein.seekg(2, 1); //dich sang phai 2 don vi
+	filein.seekg(2, 1); //dịch con trỏ sang phải 2 đơn vị
 	getline(filein, name, ',');
 	filein.seekg(1, 1);
 	getline(filein, cmnd, ',');

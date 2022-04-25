@@ -1,0 +1,26 @@
+5
+8777, doan ngoc toan, 123, 15/8/2002, hai phong, 999, 1570
+2
+999, +900, toan dai ka, 25/4/2022 23:59:56
+999, +801, lap trinh, 26/4/2022 0:0:10
+1
+999, -131, tien an sang, 26/4/2022 0:0:20
+8829, ninh thi thuy hang, 1233, 12/8/2002, bac giang, 888, 14311
+2
+888, +1333, yayad, 26/4/2022 0:0:33
+888, +13311, nap choi choi, 26/4/2022 0:2:45
+1
+888, -333, mua quan ao, 26/4/2022 0:2:54
+8871, phan duc trong, 3313, 13/9/2003, nam dinh, 123, 1313
+1
+123, +1313, trong trong trong, 26/4/2022 0:3:9
+0
+8920, le sy thien, 3133, 12/8/2002, ha noi, 333, 41414
+1
+333, +41414, thien thien thien, 26/4/2022 0:3:21
+0
+8976, tran ngoc son, 313, 19/9/2002, ha noi, 555, 498669
+1
+555, +500000, lap trinh huong doi tuong, 26/4/2022 0:3:48
+1
+555, -1331, hahahaa, 26/4/2022 0:3:57

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "account.h"
 #include <vector>
 #include <iostream>
@@ -13,14 +13,14 @@ public:
 	~arr_account();
 	void input();
 	void output();
-	void addwithdraw(); //ham rut tien
-	void adddeposit(); //ham nap tien
-	void displayhistory();  //ham kiem tra lich su giao dich
-	void deleteaccount(); //ham xoa tai khoan
-	void searchaccount(); //ham tim kiem 
-	void modifyaccount(); //ham sua doi thong tin tai khoan
+	void addwithdraw(); //thêm gd rút tiền
+	void adddeposit(); //thêm gd nạp tiền
+	void displayhistory();  //kiểm tra lịch sử giao dịch
+	void deleteaccount(); //xóa tài khoản
+	void searchaccount(); //tìm kiếm tài khoản bằng STK 
+	void modifyaccount(); //sửa đổi tt tài khoản bằng STK
 	void savefile(); //ghi file
-	void readaccount(ifstream& filein);
+	void readaccount(ifstream& filein); //đọc tt 
 	void readfile(); //doc file
 };
 

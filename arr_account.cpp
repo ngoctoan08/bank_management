@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "arr_account.h"
 #include <iomanip> 
 arr_account::arr_account() {
@@ -204,7 +204,7 @@ void arr_account::modifyaccount() {
 
 void arr_account::savefile() {
 	ofstream fileout; //tao file
-	fileout.open("THONGTIN.txt", ios_base::out);
+	fileout.open("C:\\Users\\Doan Toan\\Desktop\\git_train\\bank_management\\thongtin.txt", ios_base::out);
 	fileout << arr_ac.size() << "\n"; //so luong tai khoan
 	for (int i = 0; i < arr_ac.size(); i++)
 	{
@@ -215,20 +215,20 @@ void arr_account::savefile() {
 
 void arr_account::readaccount(ifstream& filein) {
 	account x;
-	int n; //doc so luong tai khoan
+	int n; // đọc số lượng tài khoản
 	filein >> n;
-	string temp; //doc dau xuong dong
+	string temp; //đọc dấu \n
 	getline(filein, temp);
 	for (int i = 0; i < n; i++)
 	{
 		x.readfile(filein);
-		arr_ac.push_back(x); //them ac vao ds
+		arr_ac.push_back(x); //đọc xong thêm vào danh sách tài khoản
 	}
 }
 
 void arr_account::readfile() {
 	ifstream filein;
-	filein.open("THONGTIN.txt", ios_base::in);
+	filein.open("C:\\Users\\Doan Toan\\Desktop\\git_train\\bank_management\\thongtin.txt", ios_base::in);
 	arr_account::readaccount(filein);
 	filein.close();
 }
