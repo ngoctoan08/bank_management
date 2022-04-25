@@ -35,29 +35,6 @@ void account::setMoney(float MONEY) {
 	this->money = MONEY;
 }
 
-//void account::ac_withdraw() {
-//	withdraw w;
-//	w.addwithdraw(numac);
-//	if (money > w.Getwd_money()) { //ktra so du co du khong?
-//		this->money -= w.Getwd_money();
-//		arr_wd.push_back(w);
-//		cout << "\n\t\tRut tien thanh cong";
-//	}
-//	else
-//	{
-//		cout << "\n\t\tTai khoan khong du tien";
-//	}
-//}
-//
-//void account::ac_deposit() {
-//	deposit d;
-//	d.adddeposit(numac);
-//	this->money += d.Getde_money();
-//	arr_de.push_back(d);
-//	cout << "\n\t\tNap tien thanh cong";
-//}
-
-
 void account::ac_withdraw() {
 	/*transaction *ts;
 	ts = new withdraw;*/
@@ -78,10 +55,7 @@ void account::ac_withdraw() {
 }
 	
 void account::ac_deposit() {
-	//transaction* ts;
 	deposit de;
-	//ts = &de;
-	//ts->addtransaction(numac);
 	de.addtransaction(numac);
 	this->money += de.getTs_money();
 	arr_de.push_back(de);
@@ -108,14 +82,12 @@ void titlewithdraw() {
 
 
 void account::ac_history() {
-	//cout << "\n\t\t*****************************************************LICH SU NAP TIEN******************************************************\n";
+
 	titletransaction();
 	for (int i = 0; i < arr_de.size(); i++)
 	{
 		arr_de[i].displaytransaction();
 	}
-	//cout << "\n\n\t\t*****************************************************LICH SU RUT TIEN******************************************************\n";
-	//titlewithdraw();
 	for (int i = 0; i < arr_wd.size(); i++)
 	{
 		arr_wd[i].displaytransaction();
@@ -177,7 +149,7 @@ void account::readdeposit(ifstream& filein) { //doc tt nap tien
 	deposit de;
 	int n; //sl nap tien
 	filein >> n;
-	string temp;
+	string temp; //doc dau xuong dong
 	getline(filein, temp);
 	for (int i = 0; i < n; i++)
 	{

@@ -4,7 +4,7 @@
 #include <iostream>
 
 using namespace std;
-class arr_account //:public account
+class arr_account
 {
 private:
 	vector <account> arr_ac;

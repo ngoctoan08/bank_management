@@ -49,11 +49,6 @@ void customer::output() {
 	cout << left << setw(30) << address;
 }
 
-
-string customer::getHeader() {
-	return "Thong tin: \n";
-}
-
 void customer::savefile(ofstream& fileout) {
 	fileout << id << ", ";
 	fileout << name << ", ";
@@ -65,7 +60,6 @@ void customer::savefile(ofstream& fileout) {
 }
 
 void customer::readfile(ifstream& filein) {
-	//getline(filein, id, ','); //doc tu con tro den dau , 
 	filein >> this->id;
 	filein.seekg(2, 1); //dich sang phai 2 don vi
 	getline(filein, name, ',');
@@ -73,7 +67,6 @@ void customer::readfile(ifstream& filein) {
 	getline(filein, cmnd, ',');
 	int DAY, MONTH, YEAR;
 	filein >> DAY;
-	//filein>>date.getDay();
 	date.setDay(DAY);
 	filein.seekg(1, 1);
 	filein >> MONTH;
@@ -81,7 +74,7 @@ void customer::readfile(ifstream& filein) {
 	filein.seekg(1, 1);
 	filein >> YEAR;
 	date.setYear(YEAR);
-	filein.seekg(2, 1); // 2
+	filein.seekg(2, 1); 
 	getline(filein, address, ',');
 	filein.seekg(1, 1);
 }

@@ -23,8 +23,6 @@ void dayofbirth::input() {
 }
 
 void dayofbirth::output() {
-	/*cout << day << "/" << month << "/" << year;
-	cout << left << setw(7) << " ";*/
 	cout << dayofbirth::getDay() << "/" << dayofbirth::getMonth() << "/" << dayofbirth::getYear();
 	cout << left << setw(7) << " ";
 }

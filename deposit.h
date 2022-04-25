@@ -9,8 +9,7 @@ class deposit : public transaction
 public:
 	deposit(); //ham khoi tao
 	~deposit(); //ham huy
-	float getDe_money();
 	void addtransaction(string num);
-	void displaytransaction();
+	void displaytransaction(); //ham hien thi thong tin nap tien
 };
 

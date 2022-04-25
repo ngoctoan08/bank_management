@@ -204,8 +204,8 @@ void arr_account::modifyaccount() {
 
 void arr_account::savefile() {
 	ofstream fileout; //tao file
-	fileout.open("C:\\Users\\Doan Toan\\Desktop\\thongtin.txt", ios_base::out);
-	fileout << arr_ac.size() << "\n";
+	fileout.open("THONGTIN.txt", ios_base::out);
+	fileout << arr_ac.size() << "\n"; //so luong tai khoan
 	for (int i = 0; i < arr_ac.size(); i++)
 	{
 		arr_ac[i].savefile(fileout);
@@ -215,9 +215,9 @@ void arr_account::savefile() {
 
 void arr_account::readaccount(ifstream& filein) {
 	account x;
-	int n;
+	int n; //doc so luong tai khoan
 	filein >> n;
-	string temp;
+	string temp; //doc dau xuong dong
 	getline(filein, temp);
 	for (int i = 0; i < n; i++)
 	{
@@ -228,7 +228,7 @@ void arr_account::readaccount(ifstream& filein) {
 
 void arr_account::readfile() {
 	ifstream filein;
-	filein.open("C:\\Users\\Doan Toan\\Desktop\\thongtin.txt", ios_base::in);
+	filein.open("THONGTIN.txt", ios_base::in);
 	arr_account::readaccount(filein);
 	filein.close();
 }

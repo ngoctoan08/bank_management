@@ -7,7 +7,7 @@ deposit::~deposit() {
 }
 
 void deposit::addtransaction(string num) {
-	this->ts_num = num;
+	this->ts_num = num; //gan so tai khoan can nap
 	cout << "\n\t\tNhap so tien nap: ";
 	cin >> ts_money;
 	cin.ignore();

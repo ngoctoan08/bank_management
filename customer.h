@@ -15,7 +15,7 @@ protected:
 	dayofbirth date;
 	string address;
 public:
-	int stt = 0;
+	int stt = 0; //so thu tu
 	customer();
 	~customer();
 	void setId(int ID);
@@ -23,11 +23,9 @@ public:
 	void setCmnd(string CMND);
 	void setDate(dayofbirth DATE);
 	void setAddress(string ADDRESS);
-	void input();
-	void output();
-	string getHeader();
+	void input(); //nhap thong tin
+	void output(); //xuat thong tin
 	void savefile(ofstream& fileout); //ghi file
 	void readfile(ifstream&); //phuong thuc doc file
-	friend class arr_account;
 };
 

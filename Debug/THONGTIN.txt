@@ -1,0 +1,17 @@
+5
+2881, doan ngoc toan, 1001, 15/8/2002, hai phong, 999, 0
+0
+0
+2950, ngo van dung, 1003, 13/9/2002, bac ninh, 666, 0
+0
+0
+3045, phan duc trong, 1231, 18/9/2002, nam dinh, 129, 0
+0
+0
+3113, ninh thi thuy hang, 1241, 12/8/2002, bac giang, 888, 0
+0
+0
+3273, le sy thien, 1241, 12/8/2003, ha noi, 333, 31333
+1
+333, -31333, lap trinh, 25/4/2022 17:55:49
+0
