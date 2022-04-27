@@ -49,7 +49,7 @@ void controller::menu() {
 		cout << "\n\t\t07. Sua thong tin tai khoan" << endl;
 		cout << "\n\t\t08. Xoa tai khoan" << endl;
 		cout << "\n\t\t09. Ghi file" << endl;
-		cout << "\n\t\t10. Doc gile" << endl;
+		cout << "\n\t\t10. Doc file" << endl;
 		cout << "\n\t\t00. Dang xuat" << endl;
 		cout << "\n\t\t============================";
 		int choice;

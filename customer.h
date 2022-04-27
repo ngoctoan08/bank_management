@@ -26,6 +26,6 @@ public:
 	void input(); //nhập thông tin
 	void output(); //xuất thông tin
 	void savefile(ofstream& fileout); //ghi file
-	void readfile(ifstream&); //đọc file
+	void readfile(ifstream& filein); //đọc file
 };
 

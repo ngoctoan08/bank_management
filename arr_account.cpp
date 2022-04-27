@@ -163,17 +163,19 @@ void arr_account::deleteaccount() {
 	for (int i = 0; i < arr_ac.size(); i++)
 	{
 		if (arr_ac[i].getNumac() == dl_num) {
-			index = i + 1; //vi tri xoa
+			//index = i + 1; //vi tri xoa
+			index = i;
 			x = true;
 		}
 	}
 	if (x==true)
 	{
-		for (int i = index; i < arr_ac.size(); i++) 
-		{
-			arr_ac[i-1] = arr_ac[i]; //fix loi chi so ngoai pham vi
-		}
-		arr_ac.pop_back(); //xoa phan tu cuoi
+		//for (int i = index; i < arr_ac.size(); i++) 
+		//{
+		//	arr_ac[i-1] = arr_ac[i]; //fix loi chi so ngoai pham vi
+		//}
+		//arr_ac.pop_back(); //xoa phan tu cuoi
+		arr_ac.erase(arr_ac.begin()+index);
 		cout << "\n\t\tXoa thanh cong";
 	}
 	else
