@@ -1,0 +1,19 @@
+﻿  account.cpp
+D:\my_major\oopc++\bank_final\bank_final\bank_final\account.cpp(74,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\account.cpp(78,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\account.cpp(109,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\account.cpp(114,20): warning C4018: '<': signed/unsigned mismatch
+  arr_account.cpp
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(37,21): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(55,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(69,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(88,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(108,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(132,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(163,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(193,20): warning C4018: '<': signed/unsigned mismatch
+D:\my_major\oopc++\bank_final\bank_final\bank_final\arr_account.cpp(210,20): warning C4018: '<': signed/unsigned mismatch
+  customer.cpp
+D:\my_major\oopc++\bank_final\bank_final\bank_final\customer.cpp(39,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  bank_final.vcxproj -> D:\my_major\oopc++\bank_final\bank_final\Debug\bank_final.exe
